@@ -1,10 +1,10 @@
 # ZIDAS2019
 ## Requirements
 
-#Software: Install Fiji (ImageJ)
-#Language: ImageJ Macro
+# Software: Install Fiji (ImageJ)
+# Language: ImageJ Macro
 
-##Execution environment
+## Execution environment
   java.version: 1.8.0_66
   java.vendor: Oracle Corporation
   os.name: Windows 7
@@ -13,9 +13,9 @@
   IJ.getFullVersion: 1.52n99
   IJ.javaVersion: 8
 
-##Image data location
+## Image data location
 Sample image "Hela Cells"
 
 
-##Workflow
+## Workflow
 Open the Macro in Fiji
