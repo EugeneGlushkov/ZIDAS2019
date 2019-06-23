@@ -1,9 +1,13 @@
-/**
- * Evgenii Glushkov, evgenii.glushkov@epfl.ch
- * 20190623
- */
 run("HeLa Cells (1.3M, 48-bit RGB)");
 run("Split Channels");
+selectWindow("C3-hela-cells.tif");
 run("Auto Threshold", "method=MaxEntropy white");
-run("Analyze Particles...", "size=0-Infinity show=Outlines exclude clear summarize add");
+run("Threshold...");
+setThreshold(129, 255);
+run("Set Measurements...", "area mean centroid center redirect=None decimal=3");
+run("Analyze Particles...", "  show=Outlines display exclude clear include");
 close();
+setOption("BlackBackground", false);
+run("Convert to Mask");
+run("Analyze Particles...", "display exclude clear include");
+saveAs("Results", "D:/Courses/ZIDAS/Repository/ZIDAS2019/Results.csv");
